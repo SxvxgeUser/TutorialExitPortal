@@ -1,5 +1,5 @@
 # TutorialExitPortal
-A beta 1.7.3 plugin that allow a set block in the region (preferrably in the tutorial room) when walked upon to act as a teleport point to a set destination.
+A beta 1.7.3 plugin that allows a set block in the region (preferrably in the tutorial room) when walked upon to act as a teleport point to a set destination.
 Can be used to blend with a 2x1 fake aether portal with water or other portal ideas to mimick a portal.
 
 **Commands:**
