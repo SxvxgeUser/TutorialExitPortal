@@ -1,0 +1,11 @@
+name: TutorialExitPortal
+main: me.SavageUser.TutorialExitPortal.Core
+authors:
+  - SavageUser
+version: 1.0
+
+commands:
+  settutorialexit:
+    description: Sets the exit point/portal to enter in.
+  setdestination:
+    description: Sets the destination point from the exit point.
