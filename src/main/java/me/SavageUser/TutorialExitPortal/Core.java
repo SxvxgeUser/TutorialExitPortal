@@ -44,8 +44,6 @@ public class Core extends JavaPlugin implements Listener {
             this.config.setProperty("TP-Points.Destination.x", player.getLocation().getBlockX());
             this.config.setProperty("TP-Points.Destination.y", player.getLocation().getBlockY());
             this.config.setProperty("TP-Points.Destination.z", player.getLocation().getBlockZ());
-            this.config.setProperty("TP-Points.Destination.yaw", player.getLocation().getYaw());
-            this.config.setProperty("TP-Points.Destination.pitch", player.getLocation().getPitch());
             this.config.save();
         } catch (Exception ex) {
             ex.printStackTrace();
@@ -61,7 +59,7 @@ public class Core extends JavaPlugin implements Listener {
             return;
         }
 
-        if (this.config.getConfigOption("TP-Points.Destination.x") == null && this.config.getConfigOption("TP-Points.Destination.y") == null && this.config.getConfigOption("TP-Points.Destination.z") == null && this.config.getConfigOption("TP-Points.Destination.yaw") == null && this.config.getConfigOption("TP-Points.Destination.pitch") == null) {
+        if (this.config.getConfigOption("TP-Points.Destination.x") == null && this.config.getConfigOption("TP-Points.Destination.y") == null && this.config.getConfigOption("TP-Points.Destination.z") == null) {
             return;
         }
 
@@ -73,10 +71,8 @@ public class Core extends JavaPlugin implements Listener {
             int destX = (int) this.config.getConfigOption("TP-Points.Destination.x");
             int destY = (int) this.config.getConfigOption("TP-Points.Destination.y");
             int destZ = (int) this.config.getConfigOption("TP-Points.Destination.z");
-            float destYaw = (float) this.config.getConfigOption("TP-Points.Destination.yaw");
-            float destPitch = (float) this.config.getConfigOption("TP-Points.Destination.pitch");
 
-            player.teleport(new Location(player.getWorld(), destX, destY, destZ, destYaw, destPitch));
+            player.teleport(new Location(player.getWorld(), destX, destY, destZ));
         }
     }
 
@@ -142,3 +138,4 @@ public class Core extends JavaPlugin implements Listener {
         return true;
     }
 }
+
